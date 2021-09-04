@@ -30,7 +30,7 @@ load();
 
 //color scheduler
 function scheduler() {
-    
+
     //get current time
     var current = moment().hours();
     console.log(current);
@@ -38,7 +38,6 @@ function scheduler() {
     $('.time-block').each(function() {
         //parse the hour
         var hour = parseInt($(this).attr('id'));
-        //.substring(0, $(this).attr('id').length - 2));
 
         console.log(hour);
 
