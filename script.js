@@ -60,3 +60,9 @@ scheduler();
 
 //set interval for every 15 mins
 setInterval(scheduler, 1000 * 60 * 15);
+
+//clear all function
+$('#clear').on('click', function() {
+    localStorage.clear();
+    location.reload();
+});
