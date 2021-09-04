@@ -30,8 +30,8 @@ load();
 
 //color scheduler
 function scheduler() {
+    
     //get current time
-    //var current = 10;
     var current = moment().hours();
     console.log(current);
 
@@ -59,3 +59,5 @@ function scheduler() {
 }
 
 scheduler();
+
+setInterval(scheduler, 1000 * 60 * 30);
