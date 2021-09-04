@@ -33,13 +33,12 @@ function scheduler() {
 
     //get current time
     var current = moment().hours();
+
     console.log(current);
 
     $('.time-block').each(function() {
         //parse the hour
         var hour = parseInt($(this).attr('id'));
-
-        console.log(hour);
 
         //check hour and color accordingly
         if (hour < current) {
@@ -50,13 +49,14 @@ function scheduler() {
             $(this).addClass('present');
         }
         else {
-            $(this).removeClass("past");
-            $(this).removeClass("present");
-            $(this).addClass("future");
+            $(this).removeClass('past');
+            $(this).removeClass('present');
+            $(this).addClass('future');
         }
     });
 }
 
 scheduler();
 
-setInterval(scheduler, 1000 * 60 * 30);
+//set interval for every 15 mins
+setInterval(scheduler, 1000 * 60 * 15);
